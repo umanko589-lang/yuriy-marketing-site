@@ -1,0 +1,3144 @@
+﻿<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+
+.premium-house-site {
+    position:relative;
+    font-family:'Inter',sans-serif;
+    color:#1a1a1a;
+    line-height:1.6;
+    overflow-x:hidden;
+    background:#F8F6F3;
+}
+
+
+.premium-house-site *,
+.premium-house-site *::before,
+.premium-house-site *::after {
+    box-sizing:border-box;
+}
+
+
+.premium-house-site h1,
+.premium-house-site h2,
+.premium-house-site h3,
+.premium-house-site h4 {
+    font-family:'Playfair Display',serif;
+    font-weight:700;
+    line-height:1.2;
+    color:#1C1C1C;
+    margin:0;
+}
+
+
+.premium-house-site a {
+    text-decoration:none;
+    color:inherit;
+}
+
+
+.premium-house-site img {
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+
+.phs-container {
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 20px;
+}
+
+
+.phs-section {
+    padding:100px 0;
+}
+
+
+.phs-label {
+    display:inline-block;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#A68B5B;
+    margin-bottom:15px;
+}
+
+
+.phs-title {
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+
+.phs-subtitle {
+    font-size:18px;
+    color:#666;
+    max-width:650px;
+    font-weight:300;
+}
+
+
+.phs-btn {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:16px 40px;
+    background:#1C1C1C;
+    color:#fff!important;
+    font-size:14px;
+    font-weight:500;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    cursor:pointer;
+    border:0;
+    border-radius:2px;
+    transition:.4s ease;
+}
+
+
+.phs-btn:hover {
+    background:#A68B5B;
+    transform:translateY(-2px);
+    box-shadow:0 10px 30px rgba(166,139,91,.3);
+}
+
+
+.phs-btn-outline {
+    background:transparent;
+    border:1px solid rgba(255,255,255,.6);
+    color:#fff!important;
+}
+
+
+.phs-btn-outline:hover {
+    background:#fff;
+    color:#1C1C1C!important;
+}
+
+
+.phs-fade {
+    opacity:0;
+    transform:translateY(35px);
+    transition:all .8s ease;
+}
+
+
+.phs-fade.visible {
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+/* HEADER */
+.phs-header {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    padding:20px 0;
+    background:rgba(28,28,28,.25);
+    backdrop-filter:blur(12px);
+    transition:.4s ease;
+}
+
+
+.phs-header-inner {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+
+.phs-logo {
+    font-family:'Playfair Display',serif;
+    font-size:24px;
+    font-weight:700;
+    color:#fff!important;
+}
+
+
+.phs-nav {
+    display:flex;
+    gap:35px;
+}
+
+
+.phs-nav a {
+    color:rgba(255,255,255,.85)!important;
+    font-size:14px;
+}
+
+
+.phs-nav a:hover {
+    color:#fff!important;
+}
+
+
+.phs-menu-btn {
+    display:none;
+    background:none;
+    border:0;
+    cursor:pointer;
+}
+
+
+.phs-menu-btn span {
+    display:block;
+    width:25px;
+    height:2px;
+    background:#fff;
+    margin:5px 0;
+}
+
+
+/* MOBILE MENU */
+.phs-mobile-menu {
+    position:fixed;
+    inset:0;
+    z-index:2000;
+    background:rgba(28,28,28,.98);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:28px;
+    transform:translateX(100%);
+    transition:.5s ease;
+}
+
+
+.phs-mobile-menu.open {
+    transform:translateX(0);
+}
+
+
+.phs-mobile-menu a {
+    font-family:'Playfair Display',serif;
+    font-size:30px;
+    color:#fff!important;
+}
+
+
+.phs-menu-close {
+    position:absolute;
+    top:20px;
+    right:25px;
+    background:none;
+    border:0;
+    color:#fff;
+    font-size:35px;
+    cursor:pointer;
+}
+
+
+/* HERO */
+.phs-hero {
+    position:relative;
+    height:100vh;
+    min-height:680px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    overflow:hidden;
+}
+
+
+.phs-hero-bg {
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(.4);
+}
+
+
+.phs-hero-content {
+    position:relative;
+    z-index:2;
+    max-width:900px;
+    padding:20px;
+}
+
+
+.phs-hero h1 {
+    font-size:72px;
+    color:#fff;
+    margin-bottom:25px;
+}
+
+
+.phs-hero p {
+    font-size:20px;
+    color:rgba(255,255,255,.9);
+    margin:0 auto 40px;
+    max-width:750px;
+    font-weight:300;
+}
+
+
+.phs-hero-btns {
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+
+/* ABOUT */
+.phs-about-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+
+.phs-about-img {
+    overflow:hidden;
+    border-radius:4px;
+    box-shadow:0 30px 60px rgba(0,0,0,.15);
+}
+
+
+.phs-about-text p {
+    color:#555;
+    font-size:16px;
+    margin:20px 0 25px;
+}
+
+
+/* SERVICES */
+.phs-services-grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+
+.phs-service-card {
+    background:#fff;
+    padding:50px 30px;
+    border-radius:4px;
+    text-align:center;
+    box-shadow:0 10px 40px rgba(0,0,0,.04);
+    transition:.4s ease;
+}
+
+
+.phs-service-card:hover {
+    transform:translateY(-8px);
+    box-shadow:0 25px 50px rgba(166,139,91,.15);
+}
+
+
+.phs-service-icon {
+    width:60px;
+    height:60px;
+    margin:0 auto 25px;
+    fill:#A68B5B;
+}
+
+
+.phs-service-card h3 {
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+
+.phs-service-card p {
+    font-size:14px;
+    color:#777;
+}
+
+
+/* WHY */
+.phs-why-bg {
+    background:#1C1C1C;
+    color:#fff;
+}
+
+
+.phs-why-bg .phs-title {
+    color:#fff;
+}
+
+
+.phs-why-bg .phs-subtitle {
+    color:rgba(255,255,255,.6);
+}
+
+
+.phs-why-grid {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+    margin-top:60px;
+}
+
+
+.phs-why-item {
+    text-align:center;
+    padding:30px 15px;
+}
+
+
+.phs-why-num {
+    display:block;
+    font-family:'Playfair Display',serif;
+    font-size:48px;
+    color:#A68B5B;
+}
+
+
+.phs-why-item h4 {
+    color:#fff;
+    font-family:'Inter',sans-serif;
+    font-size:18px;
+    margin:10px 0;
+}
+
+
+.phs-why-item p {
+    color:rgba(255,255,255,.5);
+    font-size:14px;
+}
+
+
+/* PROJECTS */
+.phs-projects-grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+
+.phs-project-card {
+    position:relative;
+    height:450px;
+    overflow:hidden;
+    border-radius:4px;
+}
+
+
+.phs-project-card img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.7s ease;
+}
+
+
+.phs-project-card:hover img {
+    transform:scale(1.06);
+}
+
+
+.phs-project-overlay {
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    padding:40px 30px;
+    background:linear-gradient(to top,rgba(0,0,0,.85),transparent);
+    color:#fff;
+}
+
+
+.phs-project-overlay h3 {
+    color:#fff;
+    font-size:25px;
+}
+
+
+/* GALLERY */
+.phs-gallery-grid {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-template-rows:repeat(2,250px);
+    gap:15px;
+}
+
+
+.phs-gallery-item {
+    overflow:hidden;
+    border-radius:4px;
+}
+
+
+.phs-gallery-item:first-child {
+    grid-column:span 2;
+    grid-row:span 2;
+}
+
+
+.phs-gallery-item img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.6s ease;
+}
+
+
+.phs-gallery-item:hover img {
+    transform:scale(1.08);
+}
+
+
+/* STEPS */
+.phs-steps-grid {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+    margin-top:60px;
+}
+
+
+.phs-step {
+    text-align:center;
+}
+
+
+.phs-step-num {
+    width:80px;
+    height:80px;
+    border:1px solid #A68B5B;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 25px;
+    font-family:'Playfair Display',serif;
+    font-size:28px;
+    color:#A68B5B;
+}
+
+
+.phs-step h4 {
+    font-family:'Inter',sans-serif;
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+
+.phs-step p {
+    font-size:14px;
+    color:#777;
+}
+
+
+/* CALCULATOR */
+.phs-calc-wrapper {
+    max-width:800px;
+    margin:60px auto 0;
+    background:#fff;
+    padding:50px;
+    box-shadow:0 20px 60px rgba(0,0,0,.06);
+}
+
+
+.phs-calc-row {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    margin-bottom:20px;
+}
+
+
+.phs-form-group {
+    margin-bottom:20px;
+}
+
+
+.phs-form-group label {
+    display:block;
+    font-size:12px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:#666;
+    margin-bottom:8px;
+}
+
+
+.phs-form-control {
+    width:100%;
+    padding:15px;
+    border:1px solid #ddd;
+    background:#fff;
+    color:#222;
+    font-size:16px;
+    border-radius:2px;
+}
+
+
+.phs-calc-total-box {
+    margin-top:30px;
+    padding:30px;
+    background:#F8F6F3;
+    text-align:center;
+}
+
+
+.phs-calc-total-box span {
+    display:block;
+    font-size:13px;
+    color:#666;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+
+.phs-calc-total-box strong {
+    display:block;
+    font-family:'Playfair Display',serif;
+    font-size:42px;
+    margin-top:5px;
+}
+
+
+/* REVIEWS */
+.phs-reviews-slider {
+    max-width:900px;
+    margin:60px auto 0;
+    overflow:hidden;
+}
+
+
+.phs-reviews-track {
+    display:flex;
+    transition:.5s ease;
+}
+
+
+.phs-review-card {
+    min-width:100%;
+    display:flex;
+    gap:40px;
+    align-items:flex-start;
+    padding:50px;
+    background:#fff;
+    box-shadow:0 10px 40px rgba(0,0,0,.04);
+}
+
+
+.phs-review-avatar {
+    width:100px;
+    height:100px;
+    object-fit:cover;
+    border-radius:50%;
+    flex-shrink:0;
+}
+
+
+.phs-review-text h4 {
+    font-family:'Inter',sans-serif;
+    font-size:20px;
+}
+
+
+.phs-review-pos {
+    display:block;
+    color:#A68B5B;
+    font-size:14px;
+    margin:5px 0 20px;
+}
+
+
+.phs-review-text p {
+    color:#555;
+    font-style:italic;
+}
+
+
+.phs-slider-controls {
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:30px;
+}
+
+
+.phs-slider-btn {
+    width:50px;
+    height:50px;
+    border:1px solid #ddd;
+    background:#fff;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:20px;
+}
+
+
+/* FAQ */
+.phs-faq-list {
+    max-width:800px;
+    margin:60px auto 0;
+}
+
+
+.phs-faq-item {
+    border-bottom:1px solid #ddd;
+}
+
+
+.phs-faq-q {
+    width:100%;
+    padding:25px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:none;
+    border:0;
+    text-align:left;
+    cursor:pointer;
+    font-size:18px;
+    color:#222;
+}
+
+
+.phs-faq-icon {
+    font-size:25px;
+    transition:.3s;
+}
+
+
+.phs-faq-icon::before {
+    content:"+";
+}
+
+
+.phs-faq-item.active .phs-faq-icon {
+    transform:rotate(45deg);
+}
+
+
+.phs-faq-a {
+    max-height:0;
+    overflow:hidden;
+    transition:.4s ease;
+    color:#666;
+    font-size:15px;
+}
+
+
+.phs-faq-item.active .phs-faq-a {
+    max-height:300px;
+    padding-bottom:25px;
+}
+
+
+/* ADVANTAGES */
+.phs-adv-grid {
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+    margin-top:60px;
+}
+
+
+.phs-adv-card {
+    display:flex;
+    gap:25px;
+    padding:30px;
+    background:#fff;
+    box-shadow:0 10px 30px rgba(0,0,0,.03);
+}
+
+
+.phs-adv-icon {
+    width:50px;
+    height:50px;
+    padding:12px;
+    flex-shrink:0;
+    border-radius:50%;
+    background:rgba(166,139,91,.1);
+    fill:#A68B5B;
+}
+
+
+.phs-adv-text h4 {
+    font-family:'Inter',sans-serif;
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+
+.phs-adv-text p {
+    font-size:14px;
+    color:#777;
+}
+
+
+/* CONTACT */
+.phs-contact-section {
+    background:#1C1C1C;
+    color:#fff;
+}
+
+
+.phs-contact-section .phs-title {
+    color:#fff;
+}
+
+
+.phs-contact-section .phs-subtitle {
+    color:rgba(255,255,255,.6);
+}
+
+
+.phs-contact-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    margin-top:60px;
+}
+
+
+.phs-contact-info-item {
+    margin-bottom:30px;
+}
+
+
+.phs-contact-info-item h4 {
+    color:#A68B5B;
+    font-family:'Inter',sans-serif;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:8px;
+}
+
+
+.phs-contact-info-item p,
+.phs-contact-info-item a {
+    color:rgba(255,255,255,.8);
+    font-size:18px;
+}
+
+
+.phs-contact-form .phs-form-control {
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.15);
+    color:#fff;
+}
+
+
+.phs-contact-form label {
+    color:#aaa;
+}
+
+
+/* MAP */
+.phs-map {
+    width:100%;
+    height:400px;
+    border:0;
+    display:block;
+}
+
+
+/* FOOTER */
+.phs-footer {
+    background:#141414;
+    color:rgba(255,255,255,.5);
+    padding:60px 0 30px;
+    text-align:center;
+}
+
+
+.phs-footer-logo {
+    font-family:'Playfair Display',serif;
+    font-size:32px;
+    color:#fff;
+    margin-bottom:15px;
+}
+
+
+/* POPUP */
+.phs-popup {
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:99999;
+    background:rgba(0,0,0,.75);
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+
+.phs-popup.open {
+    display:flex;
+}
+
+
+.phs-popup-content {
+    width:100%;
+    max-width:500px;
+    background:#fff;
+    padding:45px;
+    position:relative;
+    animation:phsPopupIn .3s ease;
+}
+
+
+@keyframes phsPopupIn {
+    from {
+        opacity:0;
+        transform:scale(.95);
+    }
+    to {
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+
+.phs-popup-close {
+    position:absolute;
+    top:15px;
+    right:20px;
+    background:none;
+    border:0;
+    font-size:30px;
+    cursor:pointer;
+    color:#777;
+}
+
+
+.phs-popup-content h3 {
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+
+.phs-popup-content > p {
+    color:#666;
+    margin-bottom:25px;
+}
+
+
+.phs-popup-success {
+    display:none;
+    text-align:center;
+    padding:20px 0;
+}
+
+
+.phs-popup-success h3 {
+    font-size:28px;
+}
+
+
+.phs-popup-success p {
+    color:#666;
+}
+
+
+/* SCROLL TOP */
+.phs-scroll-top {
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:50px;
+    height:50px;
+    border:0;
+    border-radius:50%;
+    background:#1C1C1C;
+    color:#fff;
+    cursor:pointer;
+    z-index:999;
+    opacity:0;
+    pointer-events:none;
+    transition:.3s;
+}
+
+
+.phs-scroll-top.show {
+    opacity:1;
+    pointer-events:auto;
+}
+
+
+/* TABLET */
+@media(max-width:1024px) {
+    .phs-title {
+        font-size:40px;
+    }
+
+
+    .phs-hero h1 {
+        font-size:56px;
+    }
+
+
+    .phs-services-grid {
+        grid-template-columns:repeat(2,1fr);
+    }
+
+
+    .phs-why-grid {
+        grid-template-columns:repeat(2,1fr);
+    }
+
+
+    .phs-steps-grid {
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+
+/* MOBILE */
+@media(max-width:768px) {
+    .phs-section {
+        padding:70px 0;
+    }
+
+
+    .phs-title {
+        font-size:32px;
+    }
+
+
+    .phs-hero {
+        min-height:650px;
+    }
+
+
+    .phs-hero h1 {
+        font-size:38px;
+    }
+
+
+    .phs-hero p {
+        font-size:16px;
+    }
+
+
+    .phs-nav {
+        display:none;
+    }
+
+
+    .phs-menu-btn {
+        display:block;
+    }
+
+
+    .phs-about-grid,
+    .phs-services-grid,
+    .phs-projects-grid,
+    .phs-adv-grid,
+    .phs-contact-grid {
+        grid-template-columns:1fr;
+    }
+
+
+    .phs-why-grid {
+        grid-template-columns:1fr 1fr;
+    }
+
+
+    .phs-gallery-grid {
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:repeat(3,180px);
+    }
+
+
+    .phs-gallery-item:first-child {
+        grid-column:span 2;
+        grid-row:span 1;
+    }
+
+
+    .phs-steps-grid {
+        grid-template-columns:1fr;
+    }
+
+
+    .phs-calc-wrapper {
+        padding:30px 20px;
+    }
+
+
+    .phs-calc-row {
+        grid-template-columns:1fr;
+    }
+
+
+    .phs-review-card {
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        padding:30px 20px;
+    }
+
+
+    .phs-contact-grid {
+        gap:30px;
+    }
+
+
+    .phs-map {
+        height:300px;
+    }
+
+
+    .phs-popup-content {
+        padding:35px 25px;
+    }
+}
+</style>
+
+
+
+
+<div class="premium-house-site">
+
+
+<!-- ================= HEADER ================= -->
+
+
+<header class="phs-header">
+    <div class="phs-container phs-header-inner">
+
+
+        <a href="#top" class="phs-logo">PremiumBuild</a>
+
+
+        <nav class="phs-nav">
+            <a href="#about">О нас</a>
+            <a href="#services">Услуги</a>
+            <a href="#projects">Проекты</a>
+            <a href="#calculator">Калькулятор</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+
+
+        <button class="phs-menu-btn" type="button" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+
+    </div>
+</header>
+
+
+
+
+<!-- ================= MOBILE MENU ================= -->
+
+
+<div class="phs-mobile-menu">
+
+
+    <button class="phs-menu-close" type="button">&times;</button>
+
+
+    <a href="#about">О нас</a>
+    <a href="#services">Услуги</a>
+    <a href="#projects">Проекты</a>
+    <a href="#calculator">Калькулятор</a>
+    <a href="#contacts">Контакты</a>
+
+
+    <button class="phs-btn phs-open-popup" type="button">
+        Оставить заявку
+    </button>
+
+
+</div>
+
+
+
+
+<!-- ================= HERO ================= -->
+
+
+<section class="phs-hero" id="top">
+
+
+    <img
+        src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2071&auto=format&fit=crop"
+        alt="Современный загородный дом"
+        class="phs-hero-bg"
+    >
+
+
+    <div class="phs-hero-content phs-fade">
+
+
+        <span class="phs-label">
+            Строительство элитных домов
+        </span>
+
+
+        <h1>
+            Ваш идеальный дом в Алматы
+        </h1>
+
+
+        <p>
+            Создаем уникальные жилые пространства, объединяя
+            современные технологии, архитектуру и высокое качество.
+        </p>
+
+
+        <div class="phs-hero-btns">
+
+
+            <button class="phs-btn phs-open-popup" type="button">
+                Получить консультацию
+            </button>
+
+
+            <a href="#projects" class="phs-btn phs-btn-outline">
+                Смотреть проекты
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+<!-- ================= ABOUT ================= -->
+
+
+<section id="about" class="phs-section">
+
+
+    <div class="phs-container">
+
+
+        <div class="phs-about-grid">
+
+
+            <div class="phs-about-img phs-fade">
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop"
+                    alt="Современный коттедж"
+                    loading="lazy"
+                >
+
+
+            </div>
+
+
+            <div class="phs-about-text phs-fade">
+
+
+                <span class="phs-label">
+                    О компании
+                </span>
+
+
+                <h2 class="phs-title">
+                    Мы строим больше, чем дома
+                </h2>
+
+
+                <p>
+                    Создаем современные загородные дома с продуманной
+                    архитектурой, инженерными решениями и комфортной
+                    планировкой.
+                </p>
+
+
+                <p>
+                    Каждый проект создается с учетом задач,
+                    бюджета и индивидуальных пожеланий заказчика.
+                </p>
+
+
+                <button class="phs-btn phs-open-popup" type="button">
+                    Обсудить проект
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+<!-- ================= SERVICES ================= -->
+
+
+<section id="services" class="phs-section" style="background:#fff;">
+
+
+    <div class="phs-container" style="text-align:center;">
+
+
+        <span class="phs-label phs-fade">
+            Наши услуги
+        </span>
+
+
+        <h2 class="phs-title phs-fade">
+            Полный спектр строительных работ
+        </h2>
+
+
+        <p class="phs-subtitle phs-fade" style="margin:0 auto 60px;">
+            От разработки архитектурного проекта до строительства
+            и финишной отделки.
+        </p>
+
+
+        <div class="phs-services-grid">
+
+
+            <div class="phs-service-card phs-fade">
+
+
+                <svg class="phs-service-icon" viewBox="0 0 24 24">
+                    <path d="M3 13h1v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7h1a1 1 0 00.707-1.707l-9-9a.999.999 0 00-1.414 0l-9 9A1 1 0 003 13zm7 7v-5h4v5h-4zm2-15.586l7 7V20h-3v-5c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v5H5v-8.586l7-7z"/>
+                </svg>
+
+
+                <h3>Коттеджи под ключ</h3>
+
+
+                <p>
+                    Полный цикл строительства от фундамента
+                    до готового дома.
+                </p>
+
+
+            </div>
+
+
+
+
+            <div class="phs-service-card phs-fade">
+
+
+                <svg class="phs-service-icon" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.18l7 3.5v7.64l-7 3.5-7-3.5V7.68l7-3.5z"/>
+                </svg>
+
+
+                <h3>Архитектурное проектирование</h3>
+
+
+                <p>
+                    Индивидуальная архитектура и планировка
+                    будущего дома.
+                </p>
+
+
+            </div>
+
+
+
+
+            <div class="phs-service-card phs-fade">
+
+
+                <svg class="phs-service-icon" viewBox="0 0 24 24">
+                    <path d="M12 3c-1.27 0-2.4.8-2.82 2H3v2h1.95L2 14c-.47 2 1 4 3.5 4s4.06-2 3.5-4L6.05 7h3.12c.33.85 1.01 1.51 1.83 1.83V20H7v2h10v-2h-4V8.83c.82-.32 1.5-.98 1.83-1.83h3.12L15 14c-.47 2 1 4 3.5 4s4.06-2 3.5-4l-2.95-7H21V5h-6.18C14.4 3.8 13.27 3 12 3z"/>
+                </svg>
+
+
+                <h3>Ремонт и отделка</h3>
+
+
+                <p>
+                    Современные материалы, интерьер и
+                    финишная отделка.
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+<!-- ================= WHY ================= -->
+
+
+<section class="phs-section phs-why-bg">
+
+
+    <div class="phs-container" style="text-align:center;">
+
+
+        <span class="phs-label">
+            Преимущества
+        </span>
+
+
+        <h2 class="phs-title">
+            Почему выбирают нас
+        </h2>
+
+
+        <p class="phs-subtitle" style="margin:0 auto;">
+            Сильные стороны демонстрационного проекта
+        </p>
+
+
+        <div class="phs-why-grid">
+
+
+            <div class="phs-why-item phs-fade">
+                <span class="phs-why-num">15+</span>
+                <h4>Лет опыта</h4>
+                <p>Профессиональный подход к строительству</p>
+            </div>
+
+
+            <div class="phs-why-item phs-fade">
+                <span class="phs-why-num">300+</span>
+                <h4>Проектов</h4>
+                <p>Различные архитектурные решения</p>
+            </div>
+
+
+            <div class="phs-why-item phs-fade">
+                <span class="phs-why-num">50+</span>
+                <h4>Специалистов</h4>
+                <p>Архитекторы, инженеры и дизайнеры</p>
+            </div>
+
+
+            <div class="phs-why-item phs-fade">
+                <span class="phs-why-num">5</span>
+                <h4>Лет гарантии</h4>
+                <p>Ответственный подход к результату</p>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+<!-- ================= PROJECTS ================= -->
+
+
+<section id="projects" class="phs-section">
+
+
+    <div class="phs-container" style="text-align:center;">
+
+
+        <span class="phs-label phs-fade">
+            Портфолио
+        </span>
+
+
+        <h2 class="phs-title phs-fade">
+            Наши проекты
+        </h2>
+
+
+        <p class="phs-subtitle phs-fade" style="margin:0 auto 60px;">
+            Примеры архитектурных решений для загородных домов.
+        </p>
+
+
+        <div class="phs-projects-grid">
+
+
+            <div class="phs-project-card phs-fade">
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2075&auto=format&fit=crop"
+                    alt="Современная вилла"
+                    loading="lazy"
+                >
+
+
+                <div class="phs-project-overlay">
+                    <span class="phs-label">350 м²</span>
+                    <h3>Вилла «Солнечная»</h3>
+                </div>
+
+
+            </div>
+
+
+
+
+            <div class="phs-project-card phs-fade">
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2053&auto=format&fit=crop"
+                    alt="Элегантный коттедж"
+                    loading="lazy"
+                >
+
+
+                <div class="phs-project-overlay">
+                    <span class="phs-label">420 м²</span>
+                    <h3>Резиденция «Уютная»</h3>
+                </div>
+
+
+            </div>
+
+
+
+
+            <div class="phs-project-card phs-fade">
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?q=80&w=2070&auto=format&fit=crop"
+                    alt="Современный загородный дом"
+                    loading="lazy"
+                >
+
+
+                <div class="phs-project-overlay">
+                    <span class="phs-label">510 м²</span>
+                    <h3>Особняк «Горный»</h3>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+<!-- ================= GALLERY ================= -->
+
+
+<section class="phs-section" style="background:#fff;">
+
+
+    <div class="phs-container" style="text-align:center;">
+
+
+        <span class="phs-label phs-fade">
+            Детали
+        </span>
+
+
+        <h2 class="phs-title phs-fade">
+            Галерея работ
+        </h2>
+
+
+        <p class="phs-subtitle phs-fade" style="margin:0 auto 60px;">
+            Визуальные примеры интерьеров и архитектуры.
+        </p>
+
+
+        <div class="phs-gallery-grid">
+
+
+            <div class="phs-gallery-item phs-fade">
+                <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=2087&auto=format&fit=crop" alt="Гостиная" loading="lazy">
+            </div>
+
+
+            <div class="phs-gallery-item phs-fade">
+                <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2074&auto=format&fit=crop" alt="Интерьер ванной" loading="lazy">
+            </div>
+
+
+            <div class="phs-gallery-item phs-fade">
+                <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=2070&auto=format&fit=crop" alt="Современная кухня" loading="lazy">
+            </div>
+
+
+            <div class="phs-gallery-item phs-fade">
+                <img src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?q=80&w=2070&auto=format&fit=crop" alt="Фасад дома" loading="lazy">
+            </div>
+
+
+            <div class="phs-gallery-item phs-fade">
+                <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=2088&auto=format&fit=crop" alt="Ландшафт" loading="lazy">
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+<!-- ================= PROCESS ================= -->
+
+
+<section class="phs-section">
+
+
+    <div class="phs-container" style="text-align:center;">
+
+
+        <span class="phs-label phs-fade">
+            Процесс
+        </span>
+
+
+        <h2 class="phs-title phs-fade">
+            Этапы строительства
+        </h2>
+
+
+        <p class="phs-subtitle phs-fade" style="margin:0 auto;">
+            Понятный путь от первой консультации до готового объекта.
+        </p>
+
+
+        <div class="phs-steps-grid">
+
+
+            <div class="phs-step phs-fade">
+                <div class="phs-step-num">1</div>
+                <h4>Консультация</h4>
+                <p>Обсуждаем задачи, бюджет и пожелания.</p>
+            </div>
+
+
+            <div class="phs-step phs-fade">
+                <div class="phs-step-num">2</div>
+                <h4>Проектирование</h4>
+                <p>Создаем архитектурную концепцию.</p>
+            </div>
+
+
+            <div class="phs-step phs-fade">
+                <div class="phs-step-num">3</div>
+                <h4>Строительство</h4>
+                <p>Реализуем проект по согласованному плану.</p>
+            </div>
+
+
+            <div class="phs-step phs-fade">
+                <div class="phs-step-num">4</div>
+                <h4>Сдача объекта</h4>
+                <p>Финальная проверка и передача объекта.</p>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+<!-- ================= CALCULATOR ================= -->
+
+
+<section id="calculator" class="phs-section" style="background:#fff;">
+
+
+    <div class="phs-container" style="text-align:center;">
+
+
+        <span class="phs-label phs-fade">
+            Оценка
+        </span>
+
+
+        <h2 class="phs-title phs-fade">
+            Калькулятор стоимости
+        </h2>
+
+
+        <p class="phs-subtitle phs-fade" style="margin:0 auto;">
+            Рассчитайте ориентировочную стоимость строительства.
+        </p>
+
+
+        <div class="phs-calc-wrapper phs-fade">
+
+
+            <div class="phs-calc-row">
+
+
+                <div class="phs-form-group">
+
+
+                    <label for="phs-calc-area">
+                        Площадь дома, м²
+                    </label>
+
+
+                    <input
+                        type="number"
+                        id="phs-calc-area"
+                        class="phs-form-control"
+                        min="50"
+                        value="200"
+                        placeholder="Например: 200"
+                    >
+
+
+                </div>
+
+
+
+
+                <div class="phs-form-group">
+
+
+                    <label for="phs-calc-material">
+                        Материал стен
+                    </label>
+
+
+                    <select
+                        id="phs-calc-material"
+                        class="phs-form-control"
+                    >
+                        <option value="350000">Газобетон</option>
+                        <option value="450000">Керамический кирпич</option>
+                        <option value="550000">Монолит</option>
+                    </select>
+
+
+                </div>
+
+
+            </div>
+
+
+            <button
+                type="button"
+                class="phs-btn"
+                id="phs-calc-button"
+                style="width:100%;"
+            >
+                Рассчитать стоимость
+            </button>
+
+
+            <div class="phs-calc-total-box">
+
+
+                <span>
+                    Предварительная стоимость
+                </span>
+
+
+                <strong id="phs-calc-total">
+                    70 000 000 ₸
+                </strong>
+
+
+            </div>
+
+
+            <button
+                type="button"
+                class="phs-btn phs-open-popup"
+                style="margin-top:20px;"
+            >
+                Получить точный расчет
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+<!-- ================= REVIEWS ================= -->
+
+
+<section class="phs-section">
+
+
+    <div class="phs-container" style="text-align:center;">
+
+
+        <span class="phs-label phs-fade">
+            Отзывы
+        </span>
+
+
+        <h2 class="phs-title phs-fade">
+            Что говорят клиенты
+        </h2>
+
+
+        <div class="phs-reviews-slider phs-fade">
+
+
+            <div class="phs-reviews-track">
+
+
+                <div class="phs-review-card">
+
+
+                    <img
+                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop"
+                        alt="Клиент"
+                        class="phs-review-avatar"
+                        loading="lazy"
+                    >
+
+
+                    <div class="phs-review-text">
+
+
+                        <h4>Даурен К.</h4>
+
+
+                        <span class="phs-review-pos">
+                            Вилла «Солнечная»
+                        </span>
+
+
+                        <p>
+                            «Профессиональный подход, продуманная архитектура
+                            и внимание к деталям.»
+                        </p>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+                <div class="phs-review-card">
+
+
+                    <img
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop"
+                        alt="Клиент"
+                        class="phs-review-avatar"
+                        loading="lazy"
+                    >
+
+
+                    <div class="phs-review-text">
+
+
+                        <h4>Асем Т.</h4>
+
+
+                        <span class="phs-review-pos">
+                            Загородный коттедж
+                        </span>
+
+
+                        <p>
+                            «Понравилась прозрачность процесса и
+                            внимание к нашим пожеланиям.»
+                        </p>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+                <div class="phs-review-card">
+
+
+                    <img
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop"
+                        alt="Клиент"
+                        class="phs-review-avatar"
+                        loading="lazy"
+                    >
+
+
+                    <div class="phs-review-text">
+
+
+                        <h4>Арман М.</h4>
+
+
+                        <span class="phs-review-pos">
+                            Индивидуальный проект
+                        </span>
+
+
+                        <p>
+                            «Сложный проект был разбит на понятные этапы,
+                            что значительно упростило работу.»
+                        </p>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+            <div class="phs-slider-controls">
+
+
+                <button
+                    class="phs-slider-btn"
+                    id="phs-prev"
+                    type="button"
+                >
+                    ←
+                </button>
+
+
+                <button
+                    class="phs-slider-btn"
+                    id="phs-next"
+                    type="button"
+                >
+                    →
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+<!-- ================= FAQ ================= -->
+
+
+<section class="phs-section" style="background:#fff;">
+
+
+    <div class="phs-container" style="text-align:center;">
+
+
+        <span class="phs-label">
+            Вопросы
+        </span>
+
+
+        <h2 class="phs-title">
+            Часто задаваемые вопросы
+        </h2>
+
+
+        <div class="phs-faq-list">
+
+
+            <div class="phs-faq-item">
+
+
+                <button class="phs-faq-q" type="button">
+                    Сколько времени занимает строительство?
+                    <span class="phs-faq-icon"></span>
+                </button>
+
+
+                <div class="phs-faq-a">
+                    В среднем срок зависит от площади,
+                    архитектуры и выбранных материалов.
+                </div>
+
+
+            </div>
+
+
+
+
+            <div class="phs-faq-item">
+
+
+                <button class="phs-faq-q" type="button">
+                    Можно ли изменить проект?
+                    <span class="phs-faq-icon"></span>
+                </button>
+
+
+                <div class="phs-faq-a">
+                    Да. Индивидуальные изменения можно
+                    согласовать на соответствующих этапах проекта.
+                </div>
+
+
+            </div>
+
+
+
+
+            <div class="phs-faq-item">
+
+
+                <button class="phs-faq-q" type="button">
+                    Можно ли заказать предварительный расчет?
+                    <span class="phs-faq-icon"></span>
+                </button>
+
+
+                <div class="phs-faq-a">
+                    Да. Для предварительной оценки можно
+                    использовать калькулятор или оставить заявку.
+                </div>
+
+
+            </div>
+
+
+
+
+            <div class="phs-faq-item">
+
+
+                <button class="phs-faq-q" type="button">
+                    Можно ли подключить квиз позже?
+                    <span class="phs-faq-icon"></span>
+                </button>
+
+
+                <div class="phs-faq-a">
+                    Да. После публикации сайта можно подключить
+                    Marquiz и использовать его для сбора заявок.
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+<!-- ================= ADVANTAGES ================= -->
+
+
+<section class="phs-section">
+
+
+    <div class="phs-container">
+
+
+        <div style="text-align:center;">
+
+
+            <span class="phs-label">
+                Наш подход
+            </span>
+
+
+            <h2 class="phs-title">
+                Главные преимущества
+            </h2>
+
+
+        </div>
+
+
+
+
+        <div class="phs-adv-grid">
+
+
+            <div class="phs-adv-card phs-fade">
+
+
+                <svg class="phs-adv-icon" viewBox="0 0 24 24">
+                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                </svg>
+
+
+                <div class="phs-adv-text">
+                    <h4>Прозрачность</h4>
+                    <p>
+                        Понятные этапы работы и согласование
+                        ключевых решений.
+                    </p>
+                </div>
+
+
+            </div>
+
+
+
+
+            <div class="phs-adv-card phs-fade">
+
+
+                <svg class="phs-adv-icon" viewBox="0 0 24 24">
+                    <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 5h-2v6l5 3 1-1.7-4-2.3V7z"/>
+                </svg>
+
+
+                <div class="phs-adv-text">
+                    <h4>Соблюдение сроков</h4>
+                    <p>
+                        Организованный процесс строительства
+                        и контроль этапов.
+                    </p>
+                </div>
+
+
+            </div>
+
+
+
+
+            <div class="phs-adv-card phs-fade">
+
+
+                <svg class="phs-adv-icon" viewBox="0 0 24 24">
+                    <path d="M12 12a5 5 0 100-10 5 5 0 000 10zm-7 9a7 7 0 0114 0H5z"/>
+                </svg>
+
+
+                <div class="phs-adv-text">
+                    <h4>Индивидуальный подход</h4>
+                    <p>
+                        Решения под конкретный участок,
+                        задачи и пожелания заказчика.
+                    </p>
+                </div>
+
+
+            </div>
+
+
+
+
+            <div class="phs-adv-card phs-fade">
+
+
+                <svg class="phs-adv-icon" viewBox="0 0 24 24">
+                    <path d="M12 2l3 6 7 .8-5 4.8 1.3 7-6.3-3.4L5.7 21 7 14 2 9l7-.9L12 2z"/>
+                </svg>
+
+
+                <div class="phs-adv-text">
+                    <h4>Современная архитектура</h4>
+                    <p>
+                        Акцент на функциональность,
+                        эстетику и комфорт.
+                    </p>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+<!-- ================= CONTACTS ================= -->
+
+
+<section id="contacts" class="phs-section phs-contact-section">
+
+
+    <div class="phs-container">
+
+
+        <div style="text-align:center;">
+
+
+            <span class="phs-label">
+                Свяжитесь с нами
+            </span>
+
+
+            <h2 class="phs-title">
+                Обсудить ваш проект
+            </h2>
+
+
+            <p class="phs-subtitle" style="margin:0 auto;">
+                Оставьте заявку — обсудим задачу и подготовим
+                предварительное предложение.
+            </p>
+
+
+        </div>
+
+
+
+
+        <div class="phs-contact-grid">
+
+
+            <div>
+
+
+                <div class="phs-contact-info-item">
+                    <h4>Город</h4>
+                    <p>Алматы</p>
+                </div>
+
+
+                <div class="phs-contact-info-item">
+                    <h4>Телефон</h4>
+                    <a href="tel:+77000000000">
+                        +7 (700) 000-00-00
+                    </a>
+                </div>
+
+
+                <div class="phs-contact-info-item">
+                    <h4>Email</h4>
+                    <a href="mailto:info@example.kz">
+                        info@example.kz
+                    </a>
+                </div>
+
+
+                <div class="phs-contact-info-item">
+                    <h4>Режим работы</h4>
+                    <p>Пн–Пт: 09:00–18:00</p>
+                </div>
+
+
+            </div>
+
+
+
+
+            <form class="phs-contact-form phs-demo-form">
+
+
+                <div class="phs-form-group">
+
+
+                    <label>
+                        Ваше имя
+                    </label>
+
+
+                    <input
+                        type="text"
+                        name="name"
+                        class="phs-form-control"
+                        placeholder="Как к вам обращаться?"
+                        required
+                    >
+
+
+                </div>
+
+
+
+
+                <div class="phs-form-group">
+
+
+                    <label>
+                        Телефон
+                    </label>
+
+
+                    <input
+                        type="tel"
+                        name="phone"
+                        class="phs-form-control"
+                        placeholder="+7 (___) ___-__-__"
+                        required
+                    >
+
+
+                </div>
+
+
+
+
+                <div class="phs-form-group">
+
+
+                    <label>
+                        О проекте
+                    </label>
+
+
+                    <textarea
+                        name="comment"
+                        class="phs-form-control"
+                        rows="5"
+                        placeholder="Кратко расскажите о вашем проекте"
+                    ></textarea>
+
+
+                </div>
+
+
+
+
+                <button
+                    type="submit"
+                    class="phs-btn"
+                    style="width:100%;"
+                >
+                    Отправить заявку
+                </button>
+
+
+            </form>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+<!-- ================= MAP ================= -->
+
+
+<section>
+
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2906.8893130932316!2d76.94514131559858!3d43.23848507913773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38db36967c068d27%3A0xed674e4aae498eb5!2m3!1s0x0!2z0JDQui4g0JDQtNCy0LjQvdCwLCA1Miwg0JDQtdCw0YfQsNGA0YHQuiwg0JDQtdCw0LfQsNC90LjRjyDQkNC60LXQvNC-0YDQvdC40Lkg0L_RgNGD0LTRg9C90LXRhtC60LDRjyDQvtCx0LvQsNGB0YLRjA!5e0!3m2!1sru!2skz!4v1689938991234!5m2!1sru!2skz"
+        class="phs-map"
+        loading="lazy"
+        title="Карта Алматы"
+    ></iframe>
+
+
+</section>
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
+
+<footer class="phs-footer">
+
+
+    <div class="phs-container">
+
+
+        <div class="phs-footer-logo">
+            PremiumBuild
+        </div>
+
+
+        <p>
+            Демонстрационный проект для портфолио.
+            Сайт создан для презентации рекламной связки.
+        </p>
+
+
+    </div>
+
+
+</footer>
+
+
+
+
+<!-- ================= POPUP ================= -->
+
+
+<div class="phs-popup" id="phs-popup">
+
+
+    <div class="phs-popup-content">
+
+
+        <button
+            type="button"
+            class="phs-popup-close"
+            aria-label="Закрыть"
+        >
+            &times;
+        </button>
+
+
+
+
+        <div class="phs-popup-form-wrap">
+
+
+            <h3>
+                Получить консультацию
+            </h3>
+
+
+            <p>
+                Оставьте имя и телефон.
+                Мы свяжемся с вами для обсуждения проекта.
+            </p>
+
+
+            <form class="phs-demo-form">
+
+
+                <div class="phs-form-group">
+
+
+                    <input
+                        type="text"
+                        name="name"
+                        class="phs-form-control"
+                        placeholder="Ваше имя"
+                        required
+                    >
+
+
+                </div>
+
+
+
+
+                <div class="phs-form-group">
+
+
+                    <input
+                        type="tel"
+                        name="phone"
+                        class="phs-form-control"
+                        placeholder="+7 (___) ___-__-__"
+                        required
+                    >
+
+
+                </div>
+
+
+
+
+                <div class="phs-form-group">
+
+
+                    <textarea
+                        name="comment"
+                        class="phs-form-control"
+                        rows="4"
+                        placeholder="Комментарий"
+                    ></textarea>
+
+
+                </div>
+
+
+
+
+                <button
+                    type="submit"
+                    class="phs-btn"
+                    style="width:100%;"
+                >
+                    Отправить
+                </button>
+
+
+            </form>
+
+
+        </div>
+
+
+
+
+        <div class="phs-popup-success">
+
+
+            <h3>
+                Спасибо!
+            </h3>
+
+
+            <p>
+                Заявка принята.
+                Это демонстрационная форма портфолио.
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+<!-- ================= SCROLL TOP ================= -->
+
+
+<button
+    class="phs-scroll-top"
+    id="phs-scroll-top"
+    type="button"
+    aria-label="Наверх"
+>
+    ↑
+</button>
+
+
+
+
+</div>
+
+
+
+
+<script>
+(function() {
+
+
+    const root = document.querySelector('.premium-house-site');
+
+
+    if (!root) return;
+
+
+
+
+    /* ================= MOBILE MENU ================= */
+
+
+    const menuBtn = root.querySelector('.phs-menu-btn');
+    const mobileMenu = root.querySelector('.phs-mobile-menu');
+    const menuClose = root.querySelector('.phs-menu-close');
+
+
+    if (menuBtn && mobileMenu) {
+
+
+        menuBtn.addEventListener('click', function() {
+            mobileMenu.classList.add('open');
+        });
+
+
+    }
+
+
+    if (menuClose && mobileMenu) {
+
+
+        menuClose.addEventListener('click', function() {
+            mobileMenu.classList.remove('open');
+        });
+
+
+    }
+
+
+    mobileMenu.querySelectorAll('a').forEach(function(link) {
+
+
+        link.addEventListener('click', function() {
+            mobileMenu.classList.remove('open');
+        });
+
+
+    });
+
+
+
+
+    /* ================= POPUP ================= */
+
+
+    const popup = root.querySelector('#phs-popup');
+    const popupClose = root.querySelector('.phs-popup-close');
+
+
+    root.querySelectorAll('.phs-open-popup').forEach(function(button) {
+
+
+        button.addEventListener('click', function() {
+
+
+            if (popup) {
+                popup.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+
+
+        });
+
+
+    });
+
+
+
+
+    function closePopup() {
+
+
+        if (popup) {
+            popup.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+
+    }
+
+
+
+
+    if (popupClose) {
+        popupClose.addEventListener('click', closePopup);
+    }
+
+
+
+
+    if (popup) {
+
+
+        popup.addEventListener('click', function(e) {
+
+
+            if (e.target === popup) {
+                closePopup();
+            }
+
+
+        });
+
+
+    }
+
+
+
+
+    /* ================= SMOOTH SCROLL ================= */
+
+
+    root.querySelectorAll('a[href^="#"]').forEach(function(link) {
+
+
+        link.addEventListener('click', function(e) {
+
+
+            const id = this.getAttribute('href');
+
+
+            if (!id || id === '#') return;
+
+
+            const target = document.querySelector(id);
+
+
+            if (target) {
+
+
+                e.preventDefault();
+
+
+                const header = root.querySelector('.phs-header');
+                const offset = header ? header.offsetHeight : 0;
+
+
+                const position =
+                    target.getBoundingClientRect().top +
+                    window.pageYOffset -
+                    offset;
+
+
+                window.scrollTo({
+                    top:position,
+                    behavior:'smooth'
+                });
+
+
+            }
+
+
+        });
+
+
+    });
+
+
+
+
+    /* ================= FAQ ================= */
+
+
+    root.querySelectorAll('.phs-faq-item').forEach(function(item) {
+
+
+        const question = item.querySelector('.phs-faq-q');
+
+
+        if (!question) return;
+
+
+        question.addEventListener('click', function() {
+
+
+            const active =
+                item.classList.contains('active');
+
+
+            root.querySelectorAll('.phs-faq-item').forEach(function(other) {
+                other.classList.remove('active');
+            });
+
+
+            if (!active) {
+                item.classList.add('active');
+            }
+
+
+        });
+
+
+    });
+
+
+
+
+    /* ================= CALCULATOR ================= */
+
+
+    const areaInput =
+        root.querySelector('#phs-calc-area');
+
+
+    const materialSelect =
+        root.querySelector('#phs-calc-material');
+
+
+    const totalElement =
+        root.querySelector('#phs-calc-total');
+
+
+    function calculatePrice() {
+
+
+        if (!areaInput || !materialSelect || !totalElement) {
+            return;
+        }
+
+
+        let area =
+            parseFloat(areaInput.value) || 0;
+
+
+        if (area < 50) {
+            area = 50;
+        }
+
+
+        const price =
+            parseInt(materialSelect.value) || 350000;
+
+
+        const total =
+            area * price;
+
+
+        totalElement.textContent =
+            total.toLocaleString('ru-RU') + ' ₸';
+
+
+    }
+
+
+
+
+    if (areaInput) {
+        areaInput.addEventListener('input', calculatePrice);
+    }
+
+
+    if (materialSelect) {
+        materialSelect.addEventListener('change', calculatePrice);
+    }
+
+
+    const calcButton =
+        root.querySelector('#phs-calc-button');
+
+
+    if (calcButton) {
+        calcButton.addEventListener('click', calculatePrice);
+    }
+
+
+    calculatePrice();
+
+
+
+
+    /* ================= REVIEWS SLIDER ================= */
+
+
+    const slider =
+        root.querySelector('.phs-reviews-track');
+
+
+    const slides =
+        slider ? slider.children : [];
+
+
+    const prev =
+        root.querySelector('#phs-prev');
+
+
+    const next =
+        root.querySelector('#phs-next');
+
+
+    let currentSlide = 0;
+
+
+
+
+    function updateSlider() {
+
+
+        if (!slider || !slides.length) return;
+
+
+        slider.style.transform =
+            'translateX(-' + (currentSlide * 100) + '%)';
+
+
+    }
+
+
+
+
+    if (next) {
+
+
+        next.addEventListener('click', function() {
+
+
+            currentSlide++;
+
+
+            if (currentSlide >= slides.length) {
+                currentSlide = 0;
+            }
+
+
+            updateSlider();
+
+
+        });
+
+
+    }
+
+
+
+
+    if (prev) {
+
+
+        prev.addEventListener('click', function() {
+
+
+            currentSlide--;
+
+
+            if (currentSlide < 0) {
+                currentSlide = slides.length - 1;
+            }
+
+
+            updateSlider();
+
+
+        });
+
+
+    }
+
+
+
+
+    /* ================= DEMO FORMS ================= */
+
+
+    root.querySelectorAll('.phs-demo-form').forEach(function(form) {
+
+
+        form.addEventListener('submit', function(e) {
+
+
+            e.preventDefault();
+
+
+            /*
+             * Сейчас это демонстрационная форма.
+             *
+             * Позже сюда можно подключить:
+             *
+             * 1. Marquiz
+             * 2. Яндекс.Метрику
+             * 3. CRM
+             * 4. Telegram
+             * 5. n8n
+             */
+
+
+            const formWrap =
+                form.closest('.phs-popup-form-wrap');
+
+
+            if (formWrap) {
+
+
+                formWrap.style.display = 'none';
+
+
+                const success =
+                    formWrap.parentElement.querySelector(
+                        '.phs-popup-success'
+                    );
+
+
+                if (success) {
+                    success.style.display = 'block';
+                }
+
+
+            } else {
+
+
+                alert(
+                    'Демонстрационная заявка отправлена. ' +
+                    'На рабочем сайте здесь будет подключён Marquiz.'
+                );
+
+
+                form.reset();
+
+
+            }
+
+
+        });
+
+
+    });
+
+
+
+
+    /* ================= ANIMATIONS ================= */
+
+
+    const observer =
+        new IntersectionObserver(function(entries) {
+
+
+            entries.forEach(function(entry) {
+
+
+                if (entry.isIntersecting) {
+
+
+                    entry.target.classList.add('visible');
+
+
+                    observer.unobserve(entry.target);
+
+
+                }
+
+
+            });
+
+
+        }, {
+            threshold:.1
+        });
+
+
+
+
+    root.querySelectorAll('.phs-fade').forEach(function(element) {
+        observer.observe(element);
+    });
+
+
+
+
+    /* ================= HEADER ================= */
+
+
+    const header =
+        root.querySelector('.phs-header');
+
+
+    window.addEventListener('scroll', function() {
+
+
+        if (!header) return;
+
+
+        if (window.scrollY > 80) {
+
+
+            header.style.background =
+                'rgba(28,28,28,.96)';
+
+
+            header.style.boxShadow =
+                '0 4px 25px rgba(0,0,0,.15)';
+
+
+        } else {
+
+
+            header.style.background =
+                'rgba(28,28,28,.25)';
+
+
+            header.style.boxShadow =
+                'none';
+
+
+        }
+
+
+    });
+
+
+
+
+    /* ================= SCROLL TOP ================= */
+
+
+    const scrollTop =
+        root.querySelector('#phs-scroll-top');
+
+
+    window.addEventListener('scroll', function() {
+
+
+        if (!scrollTop) return;
+
+
+        if (window.scrollY > 600) {
+            scrollTop.classList.add('show');
+        } else {
+            scrollTop.classList.remove('show');
+        }
+
+
+    });
+
+
+
+
+    if (scrollTop) {
+
+
+        scrollTop.addEventListener('click', function() {
+
+
+            window.scrollTo({
+                top:0,
+                behavior:'smooth'
+            });
+
+
+        });
+
+
+    }
+
+
+})();
+</script>
